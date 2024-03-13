@@ -8,9 +8,13 @@ const mongoDB_LINK = process.env.mongoDB_LINK;
 import {
   createPie,
   createHist,
+  createPieFor5,
   createHistForNo7,
-  createPieFor9
+  createPieFor9,
 } from "./src/charts/charts.js";
+
+import { createFight } from "./src/fights/fights.js";
+import { Q5values } from "./src/data/sampleDataTesting.js";
 
 mongoose
   .connect(mongoDB_LINK)
@@ -58,6 +62,12 @@ mongoose
     // ************************************ //
 
     // ************************************ //
+    // QNo5 [ PIEs ]
+    createPieFor5(Q5values);     // Call this method
+    // QNo5 [ PIEs ]
+    // ************************************ //
+
+    // ************************************ //
     // QNo6 [ PIE ]
     const QNo_6_data = {
       labels: Q6Labels,
@@ -89,10 +99,9 @@ mongoose
 
     // ************************************ //
     // QNo9 [ 2-PIE ]
-    createPieFor9(Q9values);     // Call this method
+    // createPieFor9(Q9values);     // Call this method
     // QNo9 [ 2-PIE ]
     // ************************************ //
-    
 
     // ************************************ //
     // QNo10 [ PIE ]
@@ -184,18 +193,16 @@ const Q8Data = [4.058597476942648, 0.6611099332131878];
 
 const Q9values = {
   sniper: {
-    labels: ['Scoping', 'Not Scoping'],
-    data: [0, 22]
+    labels: ["Scoping", "Not Scoping"],
+    data: [0, 22],
   },
   scopingAR: {
-    labels: ['Scoping', 'Not Scoping'],
+    labels: ["Scoping", "Not Scoping"],
     data: [0, 0],
   },
 };
 
-const Q10Labels =['Blind Shots', 'Not Blind Shots'];
-const Q10Data =[61, 37540];
+const Q10Labels = ["Blind Shots", "Not Blind Shots"];
+const Q10Data = [61, 37540];
 
-
-
-
+// ***************************************************
