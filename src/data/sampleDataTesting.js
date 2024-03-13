@@ -171,3 +171,29 @@ export const Q9values = {
 
 export const Q10Labels = ["Blind Shots", "Not Blind Shots"];
 export const Q10Data = [61, 37540];
+
+// ******************************************************************* //
+
+export const fightsData = {
+  "match_id": "6159f3e1b324c2e27c417d4f",
+  "playerSteamId": "76561198016351097",
+  "targetSteamId": "76561198049530060",
+  "playerName": "Player1",
+  "targetName": "Target1",
+  "data": [
+    {
+      "playerX": 10,
+      "playerY": 20,
+      "targetX": 30,
+      "targetY": 40,
+      "isHurt": true
+    },
+    {
+      "playerX": 15,
+      "playerY": 25,
+      "targetX": 35,
+      "targetY": 45,
+      "isHurt": false
+    }
+  ]
+};

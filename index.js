@@ -29,7 +29,8 @@ import {Q1Labels,
   Q8Data,
   Q9values,
   Q10Labels,
-  Q10Data} from "./src/data/sampleDataTesting.js";
+  Q10Data,
+fightsData} from "./src/data/sampleDataTesting.js";
 
 import { createFight } from "./src/fights/fights.js";
 import { Q5values } from "./src/data/sampleDataTesting.js";
@@ -130,6 +131,8 @@ mongoose
     // createPie(QNo_10_data); // Call this method
     // QNo10 [ PIE ]
     // ************************************ //
+
+    // createFight(fightsData);
   })
   .catch((error) => {
     console.log("DB Connection Failed !!");
