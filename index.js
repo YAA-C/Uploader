@@ -13,7 +13,8 @@ import {
   createPieFor9,
 } from "./src/charts/charts.js";
 
-import {Q1Labels,
+import {
+  Q1Labels,
   Q1Data,
   Q2Labels,
   Q2Data,
@@ -30,10 +31,16 @@ import {Q1Labels,
   Q9values,
   Q10Labels,
   Q10Data,
-fightsData} from "./src/data/sampleDataTesting.js";
+  fightsData,
+  matchesData,
+  chartsData,
+  newPlayersData
+} from "./src/data/sampleDataTesting.js";
 
 import { createFight } from "./src/fights/fights.js";
 import { Q5values } from "./src/data/sampleDataTesting.js";
+import { createMatch } from "./src/matches/matches.js";
+import { updateIsAnalyzed, updateCharts , updatePlayers} from "./src/matches/matches.js";
 
 mongoose
   .connect(mongoDB_LINK)
@@ -132,7 +139,29 @@ mongoose
     // QNo10 [ PIE ]
     // ************************************ //
 
+    // ************************************ //
     // createFight(fightsData);
+    // ************************************ //
+
+    // ************************************ //
+    // creating a sample match mongoDB matches document
+    // createMatch(matchesData);
+    // ************************************ //
+
+    // ************************************ //
+    // Matches Update [ isAnalyzed ] [ WORKS ]
+    // updateIsAnalyzed("65f1e365c89defe16aa389c6", true);
+    // ************************************ //
+
+    // ************************************ //
+    // Matches Update [ charts ] [ WORKS ]
+    // updateCharts("65f1e365c89defe16aa389c6", chartsData);
+    // ************************************ //
+
+    // ************************************ //
+    // Matches Update [ players ] [ WORKS ]
+    updatePlayers("65f1e365c89defe16aa389c6", newPlayersData);
+    // ************************************ //
   })
   .catch((error) => {
     console.log("DB Connection Failed !!");

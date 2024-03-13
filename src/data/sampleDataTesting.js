@@ -197,3 +197,107 @@ export const fightsData = {
     }
   ]
 };
+
+export const matchesData = {
+  "account_id": "6159f3e1b324c2e27c417d4f",
+  "charts": {
+    "Q1_id": "6159f3e1b324c2e27c417d4d",
+    "Q2_id": "6159f3e1b324c2e27c417d4e",
+    "Q3_id": "6159f3e1b324c2e27c417d4c",
+    "Q4_id": "6159f3e1b324c2e27c417d4b",
+    "No_5": {
+      "weapon_category_ar": {
+        "weapon_ak47_id": "6159f3e1b324c2e27c417d4a",
+        "weapon_famas_id": "6159f3e1b324c2e27c417d49",
+        "weapon_galilar_id": "6159f3e1b324c2e27c417d48",
+        "weapon_m4a1_id": "6159f3e1b324c2e27c417d47",
+        "weapon_m4a1_silencer_id": "6159f3e1b324c2e27c417d46"
+      },
+      "weapon_category_pistol": {
+        "weapon_deagle_id": "6159f3e1b324c2e27c417d45",
+        "weapon_elite_id": "6159f3e1b324c2e27c417d44",
+        "weapon_fiveseven_id": "6159f3e1b324c2e27c417d43",
+        "weapon_glock_id": "6159f3e1b324c2e27c417d42",
+        "weapon_p250_id": "6159f3e1b324c2e27c417d41",
+        "weapon_tec9_id": "6159f3e1b324c2e27c417d40",
+        "weapon_usp_silencer_id": "6159f3e1b324c2e27c417d3f"
+      },
+      "weapon_category_smg": {
+        "weapon_mac10_id": "6159f3e1b324c2e27c417d3e",
+        "weapon_mp9_id": "6159f3e1b324c2e27c417d3d"
+      },
+      "weapon_category_sniper": {
+        "weapon_awp_id": "6159f3e1b324c2e27c417d3c"
+      }
+    },
+    "Q6_id": "6159f3e1b324c2e27c417d3b",
+    "Q7_id": "6159f3e1b324c2e27c417d3a",
+    "Q8_id": "6159f3e1b324c2e27c417d39",
+    "Q9_id": "6159f3e1b324c2e27c417d38",
+    "Q10_id": "6159f3e1b324c2e27c417d37"
+  },
+  "is_Analyzed": false,
+  "tebi_Link": "https://example.com",
+  "players": [
+    {
+      "steamid": "76561198016351097",
+      "playerName": "Player1",
+      "isCheating": false
+    },
+    {
+      "steamid": "76561198049530060",
+      "playerName": "Player2",
+      "isCheating": true
+    }
+  ]
+};
+
+export const chartsData = {
+  Q1_id: "6159f3e1b324c2e27c417d4d",
+  Q2_id: "6159f3e1b324c2e27c417d4d",
+  Q3_id: "6159f3e1b324c2e27c417d4d",
+  Q4_id: "6159f3e1b324c2e27c417d4d",
+  No_5: {
+    weapon_category_ar: {
+      weapon_ak47_id: "6159f3e1b324c2e27c417d4a",
+      weapon_famas_id: "6159f3e1b324c2e27c417d49",
+      weapon_galilar_id: "6159f3e1b324c2e27c417d48",
+      weapon_m4a1_id: "6159f3e1b324c2e27c417d47",
+      weapon_m4a1_silencer_id: "6159f3e1b324c2e27c417d46"
+    },
+    weapon_category_pistol: {
+      weapon_deagle_id: "6159f3e1b324c2e27c417d45",
+      weapon_elite_id: "6159f3e1b324c2e27c417d44",
+      weapon_fiveseven_id: "6159f3e1b324c2e27c417d43",
+      weapon_glock_id: "6159f3e1b324c2e27c417d42",
+      weapon_p250_id: "6159f3e1b324c2e27c417d41",
+      weapon_tec9_id: "6159f3e1b324c2e27c417d40",
+      weapon_usp_silencer_id: "6159f3e1b324c2e27c417d3f"
+    },
+    weapon_category_smg: {
+      weapon_mac10_id: "6159f3e1b324c2e27c417d3e",
+      weapon_mp9_id: "6159f3e1b324c2e27c417d3d"
+    },
+    weapon_category_sniper: {
+      weapon_awp_id: "6159f3e1b324c2e27c417d3c"
+    }
+  },
+  Q6_id: "6159f3e1b324c2e27c417d3b",
+  Q7_id: "6159f3e1b324c2e27c417d3a",
+  Q8_id: "6159f3e1b324c2e27c417d39",
+  Q9_id: "6159f3e1b324c2e27c417d38",
+  Q10_id: "6159f3e1b324c2e27c417d37"
+};
+
+export const newPlayersData = [
+  {
+    steamid: "new_steamid1",
+    playerName: "Updated 1",
+    isCheating: false
+  },
+  {
+    steamid: "new_steamid2",
+    playerName: "New Player 2",
+    isCheating: true
+  }
+];
