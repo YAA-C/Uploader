@@ -15,6 +15,11 @@ const fightSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    isCheating:{
+      type: Boolean,
+      default: false,
+      required:true
+    },
     playerName: { type: String, required: true },
     targetName: { type: String, required: true },
     data: [

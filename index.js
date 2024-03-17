@@ -7,9 +7,9 @@ const mongoDB_LINK = process.env.mongoDB_LINK;
 
 import {
   createPie,
+  createBar,
   createHist,
   createPieFor5,
-  createHistForNo7,
   createPieFor9,
 } from "./src/charts/charts.js";
 
@@ -24,8 +24,8 @@ import {
   Q4Data,
   Q6Labels,
   Q6Data,
-  Q7HistData,
-  Q7HistEdges,
+  Q7Labels,
+  Q7Data,
   Q8Labels,
   Q8Data,
   Q9values,
@@ -34,7 +34,7 @@ import {
   fightsData,
   matchesData,
   chartsData,
-  newPlayersData
+  newPlayersData,
 } from "./src/data/sampleDataTesting.js";
 
 import { createFight } from "./src/fights/fights.js";
@@ -48,23 +48,23 @@ mongoose
     console.log("DB connected 🌟");
 
     // ************************************ //
-    // QNo1 [ PIE ]
+    // QNo1 [ BAR ]
     const QNo_1_data = {
       labels: Q1Labels,
       data: Q1Data,
     };
-    // createPie(QNo_1_data);     // Call this method
-    // QNo1 [ PIE ]
+    // createBar(QNo_1_data);     // Call this method
+    // QNo1 [ BAR ]
     // ************************************ //
 
     // ************************************ //
-    // QNo2 [ HIST ]
+    // QNo2 [ BAR ]
     const QNo_2_data = {
-      histData: Q2Labels,
-      edges: Q2Data,
+      labels: Q2Labels,
+      data: Q2Data,
     };
-    // createHist(QNo_2_data);     // call this method
-    // QNo2 [ HIST ]
+    // createBar(QNo_2_data);     // call this method
+    // QNo2 [ BAR ]
     // ************************************ //
 
     // ************************************ //
@@ -106,26 +106,26 @@ mongoose
     // ************************************ //
     // QNo7 [ HIST ]
     const QNo_7_data = {
-      histData: Q7HistData,
-      edges: Q7HistEdges,
+      labels: Q7Labels,
+      data: Q7Data,
     };
-    // createHistForNo7(QNo_7_data); // call this method
+    // createHist(QNo_7_data); // call this method
     // QNo7 [ HIST ]
     // ************************************ //
 
     // ************************************ //
-    // QNo8 [ PIE ]
+    // QNo8 [ BAR ]
     const QNo_8_data = {
       labels: Q8Labels,
       data: Q8Data,
     };
-    // createPie(QNo_8_data);     // Call this method
-    // QNo8 [ PIE ]
+    // createBar(QNo_8_data);     // Call this method
+    // QNo8 [ BAR ]
     // ************************************ //
 
     // ************************************ //
     // QNo9 [ 2-PIE ]
-    // createPieFor9(Q9values);     // Call this method
+    createPieFor9(Q9values);     // Call this method
     // QNo9 [ 2-PIE ]
     // ************************************ //
 
@@ -160,7 +160,7 @@ mongoose
 
     // ************************************ //
     // Matches Update [ players ] [ WORKS ]
-    updatePlayers("65f1e365c89defe16aa389c6", newPlayersData);
+    // updatePlayers("65f1e365c89defe16aa389c6", newPlayersData);
     // ************************************ //
   })
   .catch((error) => {

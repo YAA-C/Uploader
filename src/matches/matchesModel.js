@@ -8,134 +8,134 @@ const matchesSchema = new mongoose.Schema(
       required: true,
     },
     charts: {
-      Q1_id: {
+      report_1: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "bars",
+        ref: "barcharts",
         required: true,
       },
-      Q2_id: {
+      report_2: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "bars",
+        ref: "barcharts",
         required: true,
       },
-      Q3_id: {
+      report_3: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "pies",
+        ref: "piecharts",
         required: true,
       },
-      Q4_id: {
+      report_4: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "bars",
+        ref: "piecharts",
         required: true,
       },
-      No_5: {
+      report_5: {
         weapon_category_ar: {
-          weapon_ak47_id: {
+          weapon_ak47: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_famas_id: {
+          weapon_famSas: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_galilar_id: {
+          weapon_galilar: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_m4a1_id: {
+          weapon_m4a1: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_m4a1_silencer_id: {
+          weapon_m4a1_silencer: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
         },
         weapon_category_pistol: {
-          weapon_deagle_id: {
+          weapon_deagle: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_elite_id: {
+          weapon_elite: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_fiveseven_id: {
+          weapon_fiveseven: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_glock_id: {
+          weapon_glock: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_p250_id: {
+          weapon_p250: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_tec9_id: {
+          weapon_tec9: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_usp_silencer_id: {
+          weapon_usp_silencer: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
         },
         weapon_category_smg: {
-          weapon_mac10_id: {
+          weapon_mac10: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
-          weapon_mp9_id: {
+          weapon_mp9: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
         },
         weapon_category_sniper: {
-          weapon_awp_id: {
+          weapon_awp: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "pies",
+            ref: "piecharts",
             required: true,
           },
         },
       },
-      Q6_id: {
+      report_6: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "bars",
+        ref: "piecharts",
         required: true,
       },
-      Q7_id: {
+      report_7: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "hists",
+        ref: "histograms",
         required: true,
       },
-      Q8_id: {
+      report_8: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "bars",
+        ref: "barcharts",
         required: true,
       },
-      Q9_id: {
+      report_9: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "nines",
         required: true,
       },
-      Q10_id: {
+      report_10: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "bars",
+        ref: "piecharts",
         required: true,
       },
     },

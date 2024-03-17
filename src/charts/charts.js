@@ -1,15 +1,31 @@
 import {
   pieModel,
   histModel,
-  histforNo7Model,
-  q9Model,
+  barModel,
+  R9Model,
 } from "./chartsModel.js";
 
-import { Q5model } from "./Q5Model.js";
+import { R5model } from "./R5Model.js";
 
 export const createPie = async (data) => {
   try {
     pieModel
+      .create(data)
+      .then((savedDocument) => {
+        console.log("Document saved successfully:", savedDocument);
+        return savedDocument;
+      })
+      .catch((error) => {
+        return console.error("Error saving document:", error);
+      });
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+export const createBar = async (data) => {
+  try {
+    barModel
       .create(data)
       .then((savedDocument) => {
         return console.log("Document saved successfully:", savedDocument);
@@ -37,33 +53,33 @@ export const createHist = async (data) => {
   }
 };
 
-export const createHistForNo7 = async (data) => {
-  try {
-    histforNo7Model
-      .create(data)
-      .then((savedDocument) => {
-        return console.log("Document saved successfully:", savedDocument);
-      })
-      .catch((error) => {
-        return console.error("Error saving document:", error);
-      });
-  } catch (e) {
-    console.error(e);
-  }
-};
-
 export const createPieFor9 = async (data) => {
   try {
-    q9Model
-      .create(data)
-      .then((savedDocument) => {
-        return console.log("Document saved successfully:", savedDocument);
-      })
-      .catch((error) => {
-        return console.error("Error saving document:", error);
-      });
-  } catch (e) {
-    console.error(e);
+    var sniper_id,ar_id; 
+
+    await pieModel.create(data?.weapon_sniper).then((res)=>{
+      sniper_id = res._id;
+    })
+
+    await pieModel.create(data?.weapon_ar).then((res)=>{
+      ar_id = res._id;
+    })
+
+    const dataToSave = {
+      weapon_sniper: sniper_id,
+      weapon_ar:ar_id
+    }
+
+    await R9Model.create(dataToSave).then((res)=>{
+      console.log(res._id);
+      return res._id;
+    }).catch((err)=>{
+      console.log(err);
+      return err;
+    })
+    
+  } catch (err) {
+    console.log(err);
   }
 };
 
@@ -84,9 +100,8 @@ export const createPieFor5 = async (data) => {
 
       Q5dataToInsert[categoryData.weapon_category] = categoryObject;
     }
-    // console.log(Q5dataToInsert);
 
-    const categoryDocument = await Q5model.create(Q5dataToInsert)
+    const categoryDocument = await R5model.create(Q5dataToInsert)
       .then((savedDocument) => {
         return console.log("Document saved successfully:", savedDocument._id);
       })

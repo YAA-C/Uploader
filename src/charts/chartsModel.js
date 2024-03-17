@@ -17,71 +17,26 @@ const commonSchema = new mongoose.Schema(
   }
 );
 
-const histSchema = new mongoose.Schema(
+const r9Schema = new mongoose.Schema(
   {
-    histData: {
-      type: [String],
-      required: true,
+    weapon_ar: {
+      type: mongoose.Schema.Types.ObjectId,
+        ref: "piecharts",
+        required: true,
     },
-    edges: {
-      type: [Number],
-      required: true,
+    weapon_sniper: {
+      type: mongoose.Schema.Types.ObjectId,
+        ref: "piecharts",
+        required: true,
     },
-  },
+  },  
   {
     versionKey: false,
     timestamps: true,
   }
 );
 
-const histforNo7Schema = new mongoose.Schema(
-  {
-    histData: {
-      type: [Number],
-      required: true,
-    },
-    edges: {
-      type: [Number],
-      required: true,
-    },
-  },
-  {
-    versionKey: false,
-    timestamps: true,
-  }
-);
-
-const q9Schema = new mongoose.Schema(
-  {
-    sniper: {
-      labels: {
-        type: [String],
-        required: true,
-      },
-      data: {
-        type: [Number],
-        required: true,
-      },
-    },
-    scopingAR: {
-      labels: {
-        type: [String],
-        required: true,
-      },
-      data: {
-        type: [Number],
-        required: true,
-      },
-    },
-  },
-  {
-    versionKey: false,
-    timestamps: true,
-  }
-);
-
-export const barModel = mongoose.model("bars", commonSchema);
-export const pieModel = mongoose.model("pies", commonSchema);
-export const histModel = mongoose.model("hists", histSchema);
-export const histforNo7Model = mongoose.model("sevens", histforNo7Schema);
-export const q9Model = mongoose.model("nines", q9Schema);
+export const barModel = mongoose.model("barcharts", commonSchema);
+export const pieModel = mongoose.model("piecharts", commonSchema);
+export const histModel = mongoose.model("histograms", commonSchema);
+export const R9Model = mongoose.model("nines", r9Schema);
