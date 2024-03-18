@@ -282,27 +282,27 @@ export const chartsData = {
   "report_4": "6159f3e1b324c2e27c417d4b",
   "report_5": {
     "weapon_category_ar": {
-      "weapon_ak47_id": "6159f3e1b324c2e27c417d4a",
-      "weapon_famas_id": "6159f3e1b324c2e27c417d49",
-      "weapon_galilar_id": "6159f3e1b324c2e27c417d48",
-      "weapon_m4a1_id": "6159f3e1b324c2e27c417d47",
-      "weapon_m4a1_silencer_id": "6159f3e1b324c2e27c417d46"
+      "weapon_ak47": "6159f3e1b324c2e27c417d4a",
+      "weapon_famas": "6159f3e1b324c2e27c417d49",
+      "weapon_galilar": "6159f3e1b324c2e27c417d48",
+      "weapon_m4a1": "6159f3e1b324c2e27c417d47",
+      "weapon_m4a1_silencer": "6159f3e1b324c2e27c417d46"
     },
     "weapon_category_pistol": {
-      "weapon_deagle_id": "6159f3e1b324c2e27c417d45",
-      "weapon_elite_id": "6159f3e1b324c2e27c417d44",
-      "weapon_fiveseven_id": "6159f3e1b324c2e27c417d43",
-      "weapon_glock_id": "6159f3e1b324c2e27c417d42",
-      "weapon_p250_id": "6159f3e1b324c2e27c417d41",
-      "weapon_tec9_id": "6159f3e1b324c2e27c417d40",
-      "weapon_usp_silencer_id": "6159f3e1b324c2e27c417d3f"
+      "weapon_deagle": "6159f3e1b324c2e27c417d45",
+      "weapon_elite": "6159f3e1b324c2e27c417d44",
+      "weapon_fiveseven": "6159f3e1b324c2e27c417d43",
+      "weapon_glock": "6159f3e1b324c2e27c417d42",
+      "weapon_p250": "6159f3e1b324c2e27c417d41",
+      "weapon_tec9": "6159f3e1b324c2e27c417d40",
+      "weapon_usp_silencer": "6159f3e1b324c2e27c417d3f"
     },
     "weapon_category_smg": {
-      "weapon_mac10_id": "6159f3e1b324c2e27c417d3e",
-      "weapon_mp9_id": "6159f3e1b324c2e27c417d3d"
+      "weapon_mac10": "6159f3e1b324c2e27c417d3e",
+      "weapon_mp9": "6159f3e1b324c2e27c417d3d"
     },
     "weapon_category_sniper": {
-      "weapon_awp_id": "6159f3e1b324c2e27c417d3c"
+      "weapon_awp": "6159f3e1b324c2e27c417d3c"
     }
   },
   "report_6": "6159f3e1b324c2e27c417d3b",
