@@ -2,7 +2,6 @@ import {
   pieModel,
   histModel,
   barModel,
-  R9Model,
 } from "./chartsModel.js";
 
 import { R5model } from "./R5Model.js";
@@ -70,14 +69,8 @@ export const createPieFor9 = async (data) => {
       weapon_ar:ar_id
     }
 
-    await R9Model.create(dataToSave).then((res)=>{
-      console.log(res._id);
-      return res._id;
-    }).catch((err)=>{
-      console.log(err);
-      return err;
-    })
-    
+    console.log(dataToSave)
+    return dataToSave;
   } catch (err) {
     console.log(err);
   }
