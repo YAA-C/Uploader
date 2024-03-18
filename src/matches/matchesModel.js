@@ -35,7 +35,7 @@ const matchesSchema = new mongoose.Schema(
             ref: "piecharts",
             required: true,
           },
-          weapon_famSas: {
+          weapon_famas: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "piecharts",
             required: true,
@@ -129,9 +129,16 @@ const matchesSchema = new mongoose.Schema(
         required: true,
       },
       report_9: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "nines",
-        required: true,
+        weapon_ar: {
+          type: mongoose.Schema.Types.ObjectId,
+            ref: "piecharts",
+            required: true,
+        },
+        weapon_sniper: {
+          type: mongoose.Schema.Types.ObjectId,
+            ref: "piecharts",
+            required: true,
+        }
       },
       report_10: {
         type: mongoose.Schema.Types.ObjectId,
