@@ -150,17 +150,17 @@ mongoose
 
     // ************************************ //
     // Matches Update [ isAnalyzed ] [ WORKS ]
-    // updateIsAnalyzed("65f7e9d2bb4df993a4800722", true);
+    // updateIsAnalyzed("65f81fb277243c78efe5ba7d", true);
     // ************************************ //
 
     // ************************************ //
     // Matches Update [ charts ] [ WORKS ]
-    // updateCharts("65f7e9d2bb4df993a4800722", chartsData);
+    // updateCharts("65f81fb277243c78efe5ba7d", chartsData);
     // ************************************ //
 
     // ************************************ //
     // Matches Update [ players ] [ WORKS ]
-    // updatePlayers("65f7e9d2bb4df993a4800722", newPlayersData);
+    updatePlayers("65f81fb277243c78efe5ba7d", newPlayersData);
     // ************************************ //
   })
   .catch((error) => {
