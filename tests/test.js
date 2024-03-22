@@ -145,7 +145,7 @@ mongoose
 
     // ************************************ //
     // creating a sample match mongoDB matches document
-    // createMatch(matchesData);
+    createMatch(matchesData);
     // ************************************ //
 
     // ************************************ //
@@ -160,7 +160,7 @@ mongoose
 
     // ************************************ //
     // Matches Update [ players ] [ WORKS ]
-    updatePlayers("65f81fb277243c78efe5ba7d", newPlayersData);
+    // updatePlayers("65f81fb277243c78efe5ba7d", newPlayersData);
     // ************************************ //
   })
   .catch((error) => {
