@@ -1,10 +1,6 @@
 import mongoose from "mongoose";
 import RabbitMQConnector from "./src/connector.js";
 
-import { createPie, createBar, createHist } from "./src/charts/charts.js";
-import { createFight } from "./src/fights/fights.js";
-import { updateIsAnalyzed, updateCharts , updatePlayers} from "./src/matches/matches.js";
-
 import dotenv from "dotenv";
 dotenv.config();
 
