@@ -25,14 +25,13 @@ export const updateIsAnalyzed = async (matchId, isAnalyzed) => {
 
     if (!updatedMatch) {
       console.log("Match not found");
-      return null;
+      throw new Error(`match_id ${matchId} not found...`);
     }
 
-    console.log("Match updated successfully:", updatedMatch);
     return updatedMatch;
   } catch (error) {
     console.error("Error updating match:", error);
-    return null;
+    throw error;
   }
 };
 
@@ -46,14 +45,13 @@ export const updateCharts = async (matchId, chartsData) => {
 
     if (!updatedMatch) {
       console.log("Match not found");
-      return null;
+      throw new Error(`match_id ${matchId} not found...`);
     }
 
-    console.log("Match updated successfully:", updatedMatch);
     return updatedMatch;
   } catch (error) {
     console.error("Error updating match:", error);
-    return null;
+    return error;
   }
 };
 
@@ -67,13 +65,12 @@ export const updatePlayers = async (matchId, playersData) => {
 
     if (!updatedMatch) {
       console.log("Match not found");
-      return null;
+      throw new Error(`match_id ${matchId} not found...`);
     }
 
-    console.log("Match updated successfully:", updatedMatch);
     return updatedMatch;
   } catch (error) {
     console.error("Error updating match:", error);
-    return null;
+    return error;
   }
 };

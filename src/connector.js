@@ -27,7 +27,7 @@ class RabbitMQConnector {
     
 
     async receiveData() {
-        this.confirmChannel.consume("to_uploader", (message) => {
+        this.confirmChannel.consume("to_uploader", async (message) => {
             let uploadData = null;
 
             try {
@@ -49,13 +49,13 @@ class RabbitMQConnector {
                     switch(data.metadata.type)
                     {
                         case "REPORT":
-                            uploadReportData(data);
+                            await uploadReportData(data);
                             break;
                         case "FIGHT":
-                            uploadFightData(data);
+                            await uploadFightData(data);
                             break;
                         case "MODEL_RESULT":
-                            uploadResultData(data);
+                            await uploadResultData(data);
                             break;
                         default:
                             throw new Error(`Wrong metadata.type: ${data.metadata.type}`);
@@ -68,6 +68,7 @@ class RabbitMQConnector {
                 // this.confirmChannel.nack(message);
                 throw err;
             }
+            console.log("Done!");
             this.confirmChannel.ack(message);
         });
     }
