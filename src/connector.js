@@ -36,6 +36,7 @@ class RabbitMQConnector {
 
     async receiveData() {
         this.confirmChannel.consume("to_uploader", async (message) => {
+            console.log("Starting Job...");
             let uploadData = null;
 
             try {
@@ -74,8 +75,8 @@ class RabbitMQConnector {
                 this.rejectMessage(message);
                 throw err;
             }
-            console.log("Done!");
             this.confirmChannel.ack(message);
+            console.log("Completed Job!");
         });
     }
 }

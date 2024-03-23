@@ -64,11 +64,12 @@ const handleCommonReport = async (reportData, reportType) => {
 
 const uploadReportData = async (data) => {
     // const match_id = data.metadata.match_id;
-    const match_id = "65fedffb555fd66cc2caae7a";
+    const match_id = "65fefff7555fd66cc2caae7f";
     let allReportData = data.data;
     let chartObj = null;
 
     const reportKeys = Object.keys(allReportData);
+    
     for (let i = 0; i < reportKeys.length; i++) {
         const reportName = reportKeys[i];
         const reportData = allReportData[reportName];
@@ -92,8 +93,6 @@ const uploadReportData = async (data) => {
             }
         }
     }
-
-    console.log("Updating", allReportData);
 
     await updateCharts(match_id, allReportData)
 }
