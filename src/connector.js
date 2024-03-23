@@ -3,6 +3,14 @@ import { uploadReportData, uploadFightData, uploadResultData } from "./core.js";
 
 
 class RabbitMQConnector {
+    rejectMessage(message) {
+        if(message.fields.redelivered === true)
+            this.confirmChannel.reject(message, false);
+        else
+            this.confirmChannel.reject(message, true);
+    }
+
+
     async connectRabbit() {
         try {
             this.connection = await amqp.connect("amqp://localhost");        
@@ -35,8 +43,7 @@ class RabbitMQConnector {
             }
             catch (err) {
                 console.log("Malformed json object!");
-                this.confirmChannel.ack(message);
-                // this.confirmChannel.nack(message);
+                this.rejectMessage(message);
                 throw err;
             }
 
@@ -64,8 +71,7 @@ class RabbitMQConnector {
             }
             catch (err) {
                 console.log("Error Completing Job...")
-                this.confirmChannel.ack(message);
-                // this.confirmChannel.nack(message);
+                this.rejectMessage(message);
                 throw err;
             }
             console.log("Done!");
