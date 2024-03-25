@@ -1,6 +1,6 @@
 import { createPie, createBar, createHist } from "./charts/charts.js";
 import { createFight } from "./fights/fights.js";
-import { updateIsAnalyzed, updateCharts , updatePlayers} from "./matches/matches.js";
+import { updateIsAnalyzed, updateCharts , updatePlayers, createMatch} from "./matches/matches.js";
 
 
 const handleReport5 = async (reportData) => {
@@ -64,7 +64,9 @@ const handleCommonReport = async (reportData, reportType) => {
 
 const uploadReportData = async (data) => {
     // const match_id = data.metadata.match_id;
-    const match_id = "65fefff7555fd66cc2caae7f";
+    const match_id = "66014d544435e7c80feae499";
+    // const match_id = await createMatch({"account_id": "60af5d29b6d80c00152e8000", "tebi_Link": "sample"})._id;
+
     let allReportData = data.data;
     let chartObj = null;
 
