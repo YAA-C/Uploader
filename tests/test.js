@@ -35,6 +35,7 @@ import {
   matchesData,
   chartsData,
   newPlayersData,
+  newMatchesDataTesting
 } from "../src/data/sampleDataTesting.js";
 
 import { createFight } from "../src/fights/fights.js";
@@ -145,7 +146,8 @@ mongoose
 
     // ************************************ //
     // creating a sample match mongoDB matches document
-    // createMatch(matchesData);
+    // createMatch(matchesData);  // Earlier
+       createMatch(newMatchesDataTesting);
     // ************************************ //
 
     // ************************************ //
@@ -160,7 +162,7 @@ mongoose
 
     // ************************************ //
     // Matches Update [ players ] [ WORKS ]
-    updatePlayers("65f81fb277243c78efe5ba7d", newPlayersData);
+    // updatePlayers("65f81fb277243c78efe5ba7d", newPlayersData);
     // ************************************ //
   })
   .catch((error) => {
