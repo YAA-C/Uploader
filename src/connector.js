@@ -4,10 +4,14 @@ import { uploadReportData, uploadFightData, uploadResultData } from "./core.js";
 
 class RabbitMQConnector {
     rejectMessage(message) {
-        if(message.fields.redelivered === true)
+        if(message.fields.redelivered === true) {
+            console.log("Discarding message from queue...");
             this.confirmChannel.reject(message, false);
-        else
+        }
+        else {
+            console.log("Requeuing message...");
             this.confirmChannel.reject(message, true);
+        }
     }
 
 
@@ -72,8 +76,9 @@ class RabbitMQConnector {
             }
             catch (err) {
                 console.log("Error Completing Job...")
+                console.log(err)
                 this.rejectMessage(message);
-                throw err;
+                return;
             }
             this.confirmChannel.ack(message);
             console.log("Completed Job!");
