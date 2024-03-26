@@ -63,10 +63,9 @@ const handleCommonReport = async (reportData, reportType) => {
 
 
 const uploadReportData = async (data) => {
-    // const match_id = data.metadata.match_id;
-    const match_id = "66014d544435e7c80feae499";
-    // const match_id = await createMatch({"account_id": "60af5d29b6d80c00152e8000", "tebi_Link": "sample"})._id;
-
+    const match_id = data.metadata.match_id;
+    // const match_id = "660177e07a125db79504229b";
+    
     let allReportData = data.data;
     let chartObj = null;
 
