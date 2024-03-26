@@ -37,9 +37,36 @@ export const updateIsAnalyzed = async (matchId, isAnalyzed) => {
 
 export const updateCharts = async (matchId, chartsData) => {
   try {
+    const updatedChartsData = { ...chartsData };
+    const checklist = {
+      weapon_category_ar: ['weapon_ak47', 'weapon_aug', 'weapon_famas', 'weapon_galilar', 'weapon_m4a1_silencer', 'weapon_m4a1', 'weapon_sg556'],
+      weapon_category_smg: ['weapon_bizon', 'weapon_mac10', 'weapon_mp5sd', 'weapon_mp7', 'weapon_mp9', 'weapon_ump45', 'weapon_p90'],
+      weapon_category_sniper: ['weapon_awp', 'weapon_ssg08', 'weapon_g3sg1', 'weapon_scar20'],
+      weapon_category_lmg: ['weapon_m249', 'weapon_negev'],
+      weapon_category_pistol: ['weapon_deagle', 'weapon_elite', 'weapon_fiveseven', 'weapon_glock', 'weapon_hkp2000', 'weapon_usp_silencer', 'weapon_cz75a', 'weapon_p250', 'weapon_tec9'],
+      weapon_category_shotgun: ['weapon_mag7', 'weapon_nova', 'weapon_xm1014', 'weapon_sawedoff']
+    };
+
+    if (!updatedChartsData.report_5) {
+      updatedChartsData.report_5 = {};
+    }
+
+    for (const category in checklist) {
+      if (checklist.hasOwnProperty(category)) {
+        if (!updatedChartsData.report_5[category]) {
+          updatedChartsData.report_5[category] = {};
+        }
+        for (const weapon of checklist[category]) {
+          if (!updatedChartsData.report_5[category][weapon]) {
+            updatedChartsData.report_5[category][weapon] = null;
+          }
+        }
+      }
+    }
+
     const updatedMatch = await matchesModel.findByIdAndUpdate(
       matchId,
-      { $set: { charts: chartsData } },
+      { $set: { charts: updatedChartsData } },
       { new: true }
     );
 
