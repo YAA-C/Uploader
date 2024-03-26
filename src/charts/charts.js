@@ -8,47 +8,31 @@ import { R5model } from "./R5Model.js";
 
 export const createPie = async (data) => {
   try {
-    pieModel
-      .create(data)
-      .then((savedDocument) => {
-        console.log("Document saved successfully:", savedDocument);
-        return savedDocument;
-      })
-      .catch((error) => {
-        return console.error("Error saving document:", error);
-      });
-  } catch (e) {
-    console.error(e);
+    const savedDocument = await pieModel.create(data);
+    return savedDocument;
+  } catch (error) {
+    console.error("Error saving document:", error);
+    throw error;
   }
 };
 
 export const createBar = async (data) => {
   try {
-    barModel
-      .create(data)
-      .then((savedDocument) => {
-        return console.log("Document saved successfully:", savedDocument);
-      })
-      .catch((error) => {
-        return console.error("Error saving document:", error);
-      });
-  } catch (e) {
-    console.error(e);
+    const savedDocument = await barModel.create(data);
+    return savedDocument;
+  } catch (error) {
+    console.error("Error saving document:", error);
+    throw error;
   }
 };
 
 export const createHist = async (data) => {
   try {
-    histModel
-      .create(data)
-      .then((savedDocument) => {
-        return console.log("Document saved successfully:", savedDocument);
-      })
-      .catch((error) => {
-        return console.error("Error saving document:", error);
-      });
-  } catch (e) {
-    console.error(e);
+    const savedDocument = await histModel.create(data);
+    return savedDocument;
+  } catch (error) {
+    console.error("Error saving document:", error);
+    throw error;
   }
 };
 
