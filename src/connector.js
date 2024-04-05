@@ -64,10 +64,10 @@ class RabbitMQConnector {
                             await uploadReportData(data);
                             break;
                         case "FIGHT":
-                            await uploadFightData(data);
+                            await uploadFightData(data.metadata.match_id, data.data);
                             break;
                         case "MODEL_RESULT":
-                            await uploadResultData(data);
+                            await uploadResultData(data.metadata.match_id, data.data);
                             break;
                         default:
                             throw new Error(`Wrong metadata.type: ${data.metadata.type}`);

@@ -98,12 +98,18 @@ const uploadReportData = async (data) => {
     await updateCharts(match_id, allReportData)
 }
 
-const uploadFightData = () => {
-    return 0;
+const uploadFightData = async (match_id, data) => {
+    for(let i = 0; i < data.length; i++)
+    {
+        const fightData = data[i];
+        await createFight(fightData);
+    }
+
+    await updateIsAnalyzed(match_id, true);
 }
 
-const uploadResultData = () => {
-    return 0;
+const uploadResultData = async (match_id, data) => {
+    await updatePlayers(match_id, data);
 }
 
 export { uploadReportData, uploadFightData, uploadResultData };
